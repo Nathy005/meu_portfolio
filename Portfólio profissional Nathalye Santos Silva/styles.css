@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
@@ -76,7 +76,7 @@ body {
     box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
     border-radius: 50%;
     border: 4px solid var(--vidro);
-    animation: flutuar 10s ease-in-out infinite;  
+    animation: flutuar 10s ease-in-out infinite;
 }
 
 h1 {
@@ -174,7 +174,7 @@ h1 {
 }
 
 .contatos-titulo {
-     text-align: center;
+    text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
 }
@@ -183,10 +183,10 @@ h1 {
     max-width: 600px;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.05);
-     backdrop-filter: blur(5px);
-     padding: 2rem;
-     border: 1px solid var(--vidro);
-     border-radius: 16px;
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
 }
 
 .campo-form {
@@ -198,6 +198,7 @@ h1 {
     border: 1px solid var(--vidro);
     outline: none;
 }
+
 .campo-form:focus {
     border-color: var(--secundaria);
     box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
@@ -236,7 +237,9 @@ h1 {
 }
 
 @keyframes flutuar {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
@@ -245,3 +248,86 @@ h1 {
     }
 }
 
+
+.curriculo,
+.certificados {
+    padding: 6rem 2rem;
+}
+
+.curriculo-titulo,
+.certificados-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--claro);
+}
+
+.curriculo-caixa,
+.certificados-caixa {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+    padding: 2rem;
+
+}
+
+.curriculo-caixa h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primaria);
+}
+
+.curriculo-caixa p,
+.curriculo-caixa ul li,
+.certificados-caixa ul li {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color: rgba(226, 232, 240, 0.9);
+    margin-bottom: 0.8rem;
+}
+
+.curriculo-caixa ul,
+.certificados-caixa ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.curriculo-caixa ul li::before,
+.certificados-caixa ul li::before {
+    content: "✔ ";
+    color: var(--secundaria);
+    font-weight: bold;
+}
+
+.curriculo .botao-form {
+    margin-top: 1.5rem;
+    display: inline-block;
+    width: auto;
+    text-decoration: none;
+}
+
+.github-link {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+.github-link a {
+    color: var(--primaria);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.github-link a:hover {
+    transform: translateY(-3px);
+}
+
+.github-link i {
+    font-size: 24px;
+}
