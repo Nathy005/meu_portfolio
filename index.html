@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfólio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contato" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="imagens/perfil_roxo.png" alt="Foto Perfil" class="foto-perfil">
+        <h1>Nathalye Santos Silva</h1>
+        <p class="cabecalho-sub-titulo">Aluna de Análise e Desenvolvimento de Sistemas</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Tenho grande interesse em tecnologia e curiosidade em aprender novas linguagens
+                de programação e diferentes formas de desenvolver soluções criativas.
+                Meu objetivo é crescer na área de desenvolvimento, adquirindo experiência e construindo soluções que
+                façam a diferença.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus projetos</h2>
+        <div class="projetos-caixa">
+
+
+            <div class="projetos-card">
+                <img src="imagens/calculadora.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Calculadora</h3>
+                    <p class="paragrafo-projetos">Este projeto é uma calculadora interativa que realiza as quatro
+                        operações matemáticas básicas (adição, subtração, multiplicação e divisão). O desenvolvimento da
+                        aplicação foi feito utilizando HTML para a estrutura, CSS para a estilização. Com um design
+                        moderno, uma paleta de cores personalizada e JavaScript para toda a lógica de funcionamento e a
+                        manipulação da interface.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="imagens/projeto2.png" alt="Projeto 2" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Em andamento</h3>
+                    <p class="paragrafo-projetos">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus,
+                        veniam debitis non deleniti sit dolorum suscipit adipisci qui voluptatem! Officiis deserunt
+                        deleniti dolore minima fugit numquam veniam quaerat distinctio exercitationem.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="imagens/projeto3.png" alt="Projeto 3" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Em andamento</h3>
+                    <p class="paragrafo-projetos">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus,
+                        veniam debitis non deleniti sit dolorum suscipit adipisci qui voluptatem! Officiis deserunt
+                        deleniti dolore minima fugit numquam veniam quaerat distinctio exercitationem.</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    
+    <section id="curriculo" class="curriculo">
+        <h2 class="curriculo-titulo">Currículo</h2>
+        <div class="curriculo-caixa">
+            <h3>Formação</h3>
+            <p>Análise e Desenvolvimento de Sistemas - Faculdade XYZ (2023 - em andamento)</p>
+
+            <h3>Experiência</h3>
+            <p>A ser preenchido</p>
+
+            <h3>Habilidades</h3>
+            <ul>
+                <li>A ser preenchido</li>
+
+
+            </ul>
+
+            <a href="imagens/Nathalye Santos Silva.png" target="_blank" class="botao-form">Baixar Currículo</a>
+        </div>
+    </section>
+
+
+    <section id="certificados" class="certificados">
+        <h2 class="certificados-titulo">Certificados</h2>
+        <div class="certificados-caixa">
+            <ul>
+                <li>Fundamentos da Inteligência Artificial (2025) - SENAI</li>
+                <li>Espanhol - Intermediário (2023) - E.E. Prof. Firmino Ladeira</li>
+                <li>Inglês - Cursando (2025) - E.E. Prof. Firmino Ladeira</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em contato</h2>
+
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+
+            </div>
+            <div class="grupo-form">
+                <textarea placeholder="Digite sua mensagem" rows="6" id="mensagem" class="campo-form"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+
+        <div class="github-link">
+    <p>Para mais informações sobre os projetos, acesse:<br>
+        <a href="https://github.com/Nathy005" target="_blank">
+            <i class='bx bxl-github'></i> GitHub
+        </a>
+    </p>
+</div>
+
+
+    </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5511910728143'
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+            console.log(url)
+
+            window.open(url, '_blank')
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
